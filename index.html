@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOLACE - Find Your Flow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-theme">
+
+  <header>
+    <img src="app-logo.png" alt="SOLACE Logo" class="logo" />
+    <h1>SOLACE</h1>
+    <button id="theme-toggle">Switch to Dark</button>
+  </header>
+
+  <main class="container-flex">
+    <!-- Artist Sidebar -->
+    <aside class="artist-sidebar">
+      <div class="artist-grid">
+        <div class="artist-card">
+          <img src="justin_bieber.jpg" alt="Justin Bieber" />
+        </div>
+        <div class="artist-card">
+          <img src="arijit_singh.jpg" alt="Arijit Singh" />
+        </div>
+        <div class="artist-card">
+          <img src="ed_sheeran.jpg" alt="Ed Sheeran" />
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Display -->
+    <section class="main-display">
+      <section id="mood-section">
+        <h2>Search by Mood</h2>
+        <div class="mood-buttons">
+          <button data-mood="happy">😊 Happy</button>
+          <button data-mood="sad">😢 Sad</button>
+          <button data-mood="chill">😎 Chill</button>
+          <button data-mood="energetic">🔥 Energetic</button>
+        </div>
+      </section>
+
+      <section id="search-section">
+        <div class="search-row">
+          <input type="text" id="song-search" placeholder="Search for songs..." />
+          <button id="voice-search-btn" title="Voice Search">🎤</button>
+          <select id="language-select">
+            <option value="english" selected>English</option>
+            <option value="hindi">Hindi</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+          </select>
+          <button id="search-btn">Search</button>
+        </div>
+      </section>
+
+      <section id="search-results"></section>
+
+      <section class="music-player">
+        <img src="default-album.jpg" alt="Album Art" class="art" />
+        <div class="song-info">
+          <h2 class="title">Select or Search Song</h2>
+          <h3 class="artist"></h3>
+        </div>
+        <div class="controls">
+          <button id="prev">Prev</button>
+          <button id="play">Play</button>
+          <button id="next">Next</button>
+        </div>
+        <input type="range" id="progress" value="0" min="0" max="100" />
+        <div class="time">
+          <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <section id="lyrics-section">
+          <h3>Lyrics</h3>
+          <pre id="lyrics">Select a song to see lyrics...</pre>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
